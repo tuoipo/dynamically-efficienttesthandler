@@ -1,0 +1,32 @@
+{
+  "version": "0.0.4",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "build": "tsc",
+    "start": "node index.js",
+    "test": "jest",
+    "lint": "eslint . --ext .ts",
+    "format": "prettier --write .",
+    "prepare": "husky install",
+    "precommit": "lint-staged",
+    "postinstall": "husky install",
+    "test-sample": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@bull-board/express": "^5.15.3",
+    "tsconfig-paths": "^4.2.0",
+    "@nestjs/cli": "^10.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "dotenv": "^16.4.5",
+    "pg": "^8.11.3",
+    "@types/node": "^20.3.1",
+    "eslint-plugin-prettier": "^5.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "prettier": "^3.0.0",
+    "@aptos-labs/ts-sdk": "^1.9.1"
+  }
+}
