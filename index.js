@@ -1,18 +1,15 @@
-function searchRange(nums, target) {
-  let left = 0;
-  let right = nums.length - 1;
-  let start = -1;
-  let end = -1;
-  while (left <= right) {
-    const mid = Math.floor((left + right) / 2);
-    if (nums[mid] === target) {
-      start = mid;
-      end = mid;
-      while (nums[start] === target) start--;
-      while (nums[end] === target) end++;
-      return [start + 1, end - 1];
-    } else if (nums[mid] < target) left = mid + 1;
-    else right = mid - 1;
+function removeNthFromEnd(head, n) {
+  const dummy = new ListNode(0);
+  dummy.next = head;
+  let first = dummy;
+  let second = dummy;
+  for (let i = 0; i <= n; i++) {
+    first = first.next;
   }
-  return [start, end];
+  while (first !== null) {
+    first = first.next;
+    second = second.next;
+  }
+  second.next = second.next.next;
+  return dummy.next;
 }
