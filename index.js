@@ -1,9 +1,6 @@
-function groupAnagrams(strs) {
-  const map = new Map();
-  for (const str of strs) {
-    const sortedStr = str.split("").sort().join("");
-    if (!map.has(sortedStr)) map.set(sortedStr, []);
-    map.get(sortedStr).push(str);
+const isPrime = (num) => {
+  for (let i = 2, sqrt = Math.sqrt(num); i <= sqrt; i++) {
+    if (num % i === 0) return false;
   }
-  return [...map.values()];
-}
+  return num > 1;
+};
